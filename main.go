@@ -54,7 +54,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 				if err != nil {
 					log.Println("Quota err:", err)
 				}
-				if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage(message.ID+":"+message.Text+" OK! remain message:"+strconv.FormatInt(quota.Value, 10))).Do(); err != nil {
+				if _, err = bot.ReplyMessage(event.ReplyToken, linebot.AudioNewMessage("https://s19.aconvert.com/convert/p3r68-cdx67/mf34t-w9oi3.mp3", "1")).Do(); err != nil {
 					log.Print(err)
 				}
 			}
