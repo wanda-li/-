@@ -49,7 +49,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 		if event.Type == linebot.EventTypeMessage {
 			switch message := event.Message.(type) {
 			case *linebot.TextMessage:
-				if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewAudioMessage("https://s19.aconvert.com/convert/p3r68-cdx67/mf34t-w9oi3.mp3", "1")).Do(); err != nil {
+				if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewAudioMessage("https://s19.aconvert.com/convert/p3r68-cdx67/mf34t-w9oi3.mp3", 1)).Do(); err != nil {
 					log.Print(err)
 				}
 			}
