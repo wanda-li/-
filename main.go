@@ -17,7 +17,6 @@ import (
 	"log"
 	"net/http"
 	"os"
-	"strconv"
 
 	"github.com/line/line-bot-sdk-go/linebot"
 )
@@ -50,10 +49,6 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 		if event.Type == linebot.EventTypeMessage {
 			switch message := event.Message.(type) {
 			case *linebot.TextMessage:
-				quota, err := bot.GetMessageQuota().Do()
-				if err != nil {
-					log.Println("Quota err:", err)
-				}
 				if _, err = bot.ReplyMessage(event.ReplyToken, linebot.AudioNewMessage("https://s19.aconvert.com/convert/p3r68-cdx67/mf34t-w9oi3.mp3", "1")).Do(); err != nil {
 					log.Print(err)
 				}
