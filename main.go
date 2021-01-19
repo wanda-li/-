@@ -57,7 +57,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
       						"https://s19.aconvert.com/convert/p3r68-cdx67/hm037-7jp07.mp3",
      				 		"https://s19.aconvert.com/convert/p3r68-cdx67/ymjd8-per4w.mp3",
       						"https://s19.aconvert.com/convert/p3r68-cdx67/4dojm-7k8y6.mp3",
-						"https://s19.aconvert.com/convert/p3r68-cdx67/mf34t-w9oi3.mp3"
+						"https://s19.aconvert.com/convert/p3r68-cdx67/mf34t-w9oi3.mp3",
      					}
 					if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewAudioMessage(Audio[rand.Intn(len(Audio))],1)).Do(); err != nil {
 					log.Print(err)
